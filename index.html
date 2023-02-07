@@ -5,29 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | NFT preview card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <main class="ctn-main">
+    <div class="ctn-card">
+      <section class="ctn-sec ctn-img">
+          <div>
+            <img src="images/image-equilibrium.jpg" alt="" class="card-img">
+            <div>
+              <img src="images/icon-view.svg" alt="Overlay Icon of view" class="overlay-icon">
+            </div> <!-- Overlay Icon -->
+          </div>
+      </section>
 
-  Equilibrium #3429
+      <section class="ctn-sec ctn-infos">
+        <h1 class="card-title">Equilibrium #3429</h1>
+        <p class="card-info">Our Equilibrium collection promotes balance and calm.</p>
+      </section>
 
-  Our Equilibrium collection promotes balance and calm.
+      <section class="ctn-sec ctn-price">
+        <div>
+          <img src="images/icon-ethereum.svg" alt="" class="crypto-img">
+          <span class="crypto-info">0.041 ETH</span>
+        </div>
 
-  0.041 ETH
-  3 days left
-  
-  Creation of Jules Wyvern
+        <div>
+          <img src="images/icon-clock.svg" alt="" class="time-img">
+          <span class="time-info">3 days left</span>
+        </div>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      </section>
+
+      <hr>
+
+      <section class="ctn-sec ctn-author">
+        <img src="images/image-avatar.png" alt="" class="author-img">
+        <p class="author-info">Creation of <span class="author-name">Jules Wyvern</span></p>
+      </section>
+    </div>
+  </main>
+
 </body>
 </html>
