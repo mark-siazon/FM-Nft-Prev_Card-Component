@@ -1,81 +1,103 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
 
-*{ /* # Front-end Style Guide */
+* {
+  /* # Front-end Style Guide */
   /* ## Layout */
   --mobile: 375px;
-  --desktop: 1440px;
+  /* --desktop: 1440px; (Unused) */
 
   /* ## Colors */
-    /* ### Primary */
-    --text-pri-softBlue: hsl(215, 51%, 70%);
-    --text-pri-cyan: hsl(178, 100%, 50%);
-    
-    /* ### Neutral (vdb = very dark bluee) */ 
-    --text-neu-vdbBG: hsl(217, 54%, 11%); /* (main BG) */
-    --text-neu-vdbCard: hsl(216, 50%, 16%); /* (card BG) */
-    --text-neu-vdbLine: hsl(215, 32%, 27%); /* (line) */
-    --text-neu-white: hsl(0, 0%, 100%);
-    
+  /* ### Primary */
+  --text-pri-softBlue: hsl(215, 51%, 70%);
+  --text-pri-cyan: hsl(178, 100%, 50%);
+
+  /* ### Neutral (vdb = veryDarkBlue) */
+  --text-neu-vdbBG: hsl(217, 54%, 11%); /* (main BG) */
+  --text-neu-vdbCard: hsl(216, 50%, 16%); /* (card BG) */
+  --text-neu-vdbLine: hsl(215, 32%, 27%); /* (line) */
+  --text-neu-white: hsl(0, 0%, 100%);
+
   /* ## Typography */
-    /* ### Body Copy */
-    --f-size: 18px; /* (paragraph) */
-    /* ### Font */
-    --f-family: 'Outfit'; /* Weights: 300, 400, 600 (https://fonts.google.com/specimen/Outfit)*/
+  /* ### Body Copy */
+  --f-size: 18px; /* (paragraph) */
+  /* ### Font */
+  --f-family: "Outfit"; /* Weights: 300, 400, 600 (https://fonts.google.com/specimen/Outfit)*/
 }
 
-body{
+body {
   background: var(--text-neu-vdbBG);
-
+  color: var(--text-neu-white);
   font-size: var(--f-size);
   font-family: var(--f-family);
-  color: var(--text-neu-white);
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
-  
 }
 
 /***** General Styles *****/
-main.ctn-main{
-  background-color: var(--text-neu-vdbCard);
-  padding: 1.5rem;
-  border-radius: 12.75px;
-  margin: 10%;
+main.ctn-main {
+  background: var(--text-neu-vdbCard);
   width: var(--mobile);
+
+  padding: 1.75rem;
+  margin: 15% 12.5%;
+  box-shadow: 0px 0px 15px 5px #0e1125, 0px 0px 25px 30px #0e11257d;
 }
 
+main.ctn-main,
+.ctn-img > div,
+.ctn-img > div:hover {
+  border-radius: 12.75px;
+}
 
+/***** *****/
+/***** Flex Styles *****/
+/***** *****/
 
-/***** Image Styles *****/
-.ctn-img{
+body,
+.ctn-img,
+.ctn-price,
+.ctn-price > div,
+.ctn-author {
   display: flex;
+}
+
+body,
+.ctn-img {
   justify-content: center;
 }
 
-.card-img{
-  width: 275px;
-  display: block;
-  margin: auto;
-  border-radius: 12.75px;
-
-  opacity: 1;
-  transition: .5s ease;
-  backface-visibility: hidden;
-
+body,
+.ctn-price > div,
+.ctn-author {
+  align-items: center;
 }
 
-.ctn-img>div:hover{
+/***** *****/
+/***** Image Styles *****/
+/***** *****/
+
+.card-img,
+.ctn-img > div {
   width: fit-content;
-  background-color: var(--text-pri-cyan);
-  border-radius: 12.75px;
-
+  height: 240px;
 }
 
+.card-img {
+  border-radius: 12px;
+}
+
+.ctn-img > div {
+  position: relative;
+  background-color: var(--text-pri-cyan);
+}
+
+.card-img,
+.overlay-icon {
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
 
 .overlay-icon {
-  transition: .5s ease;
   opacity: 0;
   position: absolute;
   top: 50%;
@@ -84,88 +106,115 @@ main.ctn-main{
   -ms-transform: translate(-50%, -50%);
 }
 
-.ctn-img>div{
-  position: relative;
-  
-}
-
-.ctn-img>div:hover .card-img {
+.ctn-img > div:hover .card-img {
   opacity: 0.65;
 }
 
-.ctn-img>div:hover .overlay-icon {
-  opacity: 1;
+.ctn-img > div:hover .overlay-icon {
+  opacity: 1; /* Unhide eye overlay */
 }
 
 /***** Text Info Styles *****/
-.card-title{
+.card-title {
   font-size: 1.45rem;
   margin: 1.5rem 0 0;
 }
 
-.card-info{
+.card-info {
   font-weight: 300;
-  font-size: 0.95rem;
-  letter-spacing: 0.035em;
+  letter-spacing: 0.035rem;
   line-height: 1.25rem;
   margin: 0.75rem 0 1.25rem;
 }
 
-
-/*****  Price Styles *****/
-.ctn-price{
-  display: flex;
-  justify-content: space-between;
+.card-info,
+.ctn-price {
   font-size: 0.95rem;
 }
 
-.ctn-price > div{
-  display: flex;
-  align-items: center;
+/*****  Price Styles *****/
+.ctn-price {
+  justify-content: space-between;
+}
+
+.ctn-price > div {
   gap: 0.25rem;
 }
 
-/* ## ETH */
-.crypto-info{
+.crypto-info {
   color: var(--text-pri-cyan);
 }
 
-/*  ## Time */
-
-hr{
-    height: 2px;
-    border: 0; 
-    border-top: 1px solid var(--text-neu-vdbLine);
-    margin: 1rem 0;
+hr {
+  height: 2px;
+  border: 0;
+  border-top: 1px solid var(--text-neu-vdbLine);
+  margin: 1rem 0;
 }
 
 /*****  Author Styles *****/
-.ctn-author{
-  display: flex;
+.ctn-author {
   justify-content: start;
-  align-items: center;
-  gap: 1rem
+  gap: 1rem;
 }
 
-.author-img{
+.author-img {
   width: 35px;
   box-sizing: border-box;
   border: 1.25px solid var(--text-neu-white);
   border-radius: 50%;
 }
 
-.author-info{
+.author-info {
   font-size: 0.925rem;
 }
 
+/*****  Other/Mixed Styles *****/
+.ctn-img,
+.card-title,
+.author-name {
+  cursor: pointer;
+}
 
-
-/*****  X Styles *****/
-.card-info, .time-info, .author-info{
+.card-info,
+.time-info,
+.author-info {
   color: var(--text-pri-softBlue);
 }
 
 .card-title,
-.author-info span.author-name{
+.author-info span.author-name {
   color: var(--text-neu-white);
+}
+
+.card-title:hover,
+.author-info span.author-name:hover {
+  color: var(--text-pri-cyan);
+}
+
+
+/***** *****/
+/***** MEDIA QUERIES *****/
+/***** *****/
+
+/* For Laptop and Up */
+@media screen and (min-width: 1024px) {
+  body {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /***** General Styles *****/
+  main.ctn-main {
+    padding: 1.75rem;
+    margin: 15% 25%;
+    width: 260px;
+  }
+
+  /***** Image Styles *****/
+  .card-img,
+  .ctn-img > div {
+    width: fit-content;
+    height: 260px;
+  }
 }

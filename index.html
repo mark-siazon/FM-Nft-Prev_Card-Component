@@ -6,16 +6,21 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
-  <title>Frontend Mentor | NFT preview card component</title>
+  <title>Frontend Mentor | NFT Preview Card Component</title>
 </head>
+
+<!-- Feb 8 (Wireframing & Initial Plan) -->
+<!-- Feb 9 (Finish HTML & CSS + Documentation) -->
+<!-- ~ Mark -->
+
 <body>
   <main class="ctn-main">
     <div class="ctn-card">
-      <section class="ctn-sec ctn-img">
+      <section class="ctn-sec ctn-img"> <!-- Display: Flex -->
           <div>
-            <img src="images/image-equilibrium.jpg" alt="" class="card-img">
+            <img src="images/image-equilibrium.jpg" alt="Main image of the card" class="card-img">
             <div>
-              <img src="images/icon-view.svg" alt="Overlay Icon of view" class="overlay-icon">
+              <img src="images/icon-view.svg" alt="Overlay eye icon" class="overlay-icon">
             </div> <!-- Overlay Icon -->
           </div>
       </section>
@@ -25,14 +30,14 @@
         <p class="card-info">Our Equilibrium collection promotes balance and calm.</p>
       </section>
 
-      <section class="ctn-sec ctn-price">
-        <div>
-          <img src="images/icon-ethereum.svg" alt="" class="crypto-img">
+      <section class="ctn-sec ctn-price"> <!-- Display: Flex -->
+        <div> <!-- Display: Flex -->
+          <img src="images/icon-ethereum.svg" alt="Ethereum cryptocurrency icon" class="crypto-img">
           <span class="crypto-info">0.041 ETH</span>
         </div>
 
         <div>
-          <img src="images/icon-clock.svg" alt="" class="time-img">
+          <img src="images/icon-clock.svg" alt="Clock icon" class="time-img">
           <span class="time-info">3 days left</span>
         </div>
 
@@ -40,12 +45,11 @@
 
       <hr>
 
-      <section class="ctn-sec ctn-author">
-        <img src="images/image-avatar.png" alt="" class="author-img">
+      <section class="ctn-sec ctn-author"> <!-- Display: Flex -->
+        <img src="images/image-avatar.png" alt="Image of the card author" class="author-img">
         <p class="author-info">Creation of <span class="author-name">Jules Wyvern</span></p>
       </section>
     </div>
   </main>
-
 </body>
 </html>
