@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | NFT Preview Card Component</title>
+</head>
+
+<!-- Feb 8 (Wireframing & Initial Plan) -->
+<!-- Feb 9 (Finish HTML & CSS + Documentation) -->
+<!-- ~ Mark -->
+
+<body>
+  <main class="ctn-main">
+    <div class="ctn-card">
+      <section class="ctn-sec ctn-img"> <!-- Display: Flex -->
+          <div>
+            <img src="images/image-equilibrium.jpg" alt="Main image of the card" class="card-img">
+            <div>
+              <img src="images/icon-view.svg" alt="Overlay eye icon" class="overlay-icon">
+            </div> <!-- Overlay Icon -->
+          </div>
+      </section>
+
+      <section class="ctn-sec ctn-infos">
+        <h1 class="card-title">Equilibrium #3429</h1>
+        <p class="card-info">Our Equilibrium collection promotes balance and calm.</p>
+      </section>
+
+      <section class="ctn-sec ctn-price"> <!-- Display: Flex -->
+        <div> <!-- Display: Flex -->
+          <img src="images/icon-ethereum.svg" alt="Ethereum cryptocurrency icon" class="crypto-img">
+          <span class="crypto-info">0.041 ETH</span>
+        </div>
+
+        <div>
+          <img src="images/icon-clock.svg" alt="Clock icon" class="time-img">
+          <span class="time-info">3 days left</span>
+        </div>
+
+      </section>
+
+      <hr>
+
+      <section class="ctn-sec ctn-author"> <!-- Display: Flex -->
+        <img src="images/image-avatar.png" alt="Image of the card author" class="author-img">
+        <p class="author-info">Creation of <span class="author-name">Jules Wyvern</span></p>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
